@@ -1,0 +1,77 @@
+/*
+Step 1:Understand the problem statement
+Step 2:Write the algorithm
+Step 3:Decide the programming language
+Step 4:Write the program
+Step 5:Test the program
+*/
+
+/*
+Algorithm:
+START
+    Accept the number as no and display its factors in decraesing order
+    Perform the Operation
+    Display the decraesing factors of that number on Console
+STOP
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files;
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  FactRev
+//  Description:    It is use find the factors in decreasing order
+//  Input:          int
+//  Output:         int
+//  Author:         Kishor Suryabhan Handge
+//  Date:           20/10/2025
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+void FactRev(int iNo)
+{
+    int iCnt = 0;
+
+    for (iCnt =(iNo / 2) ; iCnt >=1 ; iCnt--)
+    {
+        if (iNo % iCnt == 0)
+        {
+            printf("%d\t",iCnt);
+             
+        }
+    }
+     
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the Number\n");
+    scanf("%d", &iValue);
+
+    FactRev(iValue);
+
+    return 0;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test case succesfully handled by the application
+//
+//  Input:12        Output:6 , 4 , 3 , 2 , 1
+//  Input:15        Output:5 , 3 , 1
+//  Input:16        Output:8 , 4 , 2 , 1
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////

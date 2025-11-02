@@ -1,0 +1,78 @@
+/*
+Step 1:Understand the problem statement
+Step 2:Write the algorithm
+Step 3:Decide the programming language
+Step 4:Write the program
+Step 5:Test the program
+*/
+
+/*
+Algorithm:
+START
+    Accept the number as no and find its non factors
+    Perform the Operation
+    Display the non factor on the Console
+STOP
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files;
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  NonFact
+//  Description:    It is use find the Non factors
+//  Input:          int
+//  Output:         int
+//  Author:         Kishor Suryabhan Handge
+//  Date:           20/10/2025
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+void NonFact(int iNo)
+{
+    int iCnt = 0;
+
+    for (iCnt =1; iCnt <=iNo; iCnt++)
+    {
+        if (iNo % iCnt != 0)
+        {
+            printf("%d\t",iCnt);
+             
+        }
+    }
+     
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the Number\n");
+    scanf("%d", &iValue);
+
+    NonFact(iValue);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//  
+//  Test case succesfully handled by the application
+//
+//  Input:12        Output:5 , 7 , 8 , 9 , 10, 11
+//  Input:15        Output:2  , 4  , 6  , 7  , 8  , 9  , 10 , 11 , 12 , 13 , 14
+//  Input:13        Output:2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 1 , 1 , 12
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////

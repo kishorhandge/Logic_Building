@@ -1,0 +1,86 @@
+/*
+Step 1:Understand the problem statement
+Step 2:Write the algorithm
+Step 3:Decide the programming language
+Step 4:Write the program
+Step 5:Test the program
+*/
+
+/*
+Algorithm:
+START
+    Accept the number as no and find the difference between  summation of its factors  non factors
+    Perform the Operation
+    Display the Summation difference on the Console
+STOP
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files;
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name:  FactDiff
+//  Description:    It is use find the  difference between Summation  of its factors and Non factors
+//  Input:          int
+//  Output:         int
+//  Author:         Kishor Suryabhan Handge
+//  Date:           20/10/2025
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int FactDiff(int iNo)
+{
+    int iCnt = 0;
+    int iSum1=0;
+    int iSum2=0;
+
+    for (iCnt = 1; iCnt < iNo; iCnt++)
+    {
+        if (iNo % iCnt == 0)
+        {
+            iSum1=iSum1+iCnt;
+        }
+        if(iNo%iCnt!=0)
+        {
+            iSum2=iSum2+iCnt;
+        }
+    }
+    return (iSum1-iSum2);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet=0;
+
+    printf("Enter the Number\n");
+    scanf("%d", &iValue);
+
+    iRet=FactDiff(iValue);
+
+    printf("%d",iRet);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Test case succesfully handled by the application
+//
+//  Input:12        Output: 50
+//  Input:15        Output: 96
+//  Input:13        Output: 77
+//
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
