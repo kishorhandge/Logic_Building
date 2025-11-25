@@ -3,11 +3,10 @@
     iCol : 4
     
 
-1       2       3       4
-1       2               4
-1               3       4
-1       2       3       4
- 
+*       *       *       *
+*       #       *       *
+*       *       $       *
+*       *       *       *
 
 */
 #include <stdio.h>
@@ -21,7 +20,7 @@ void Pattern(int iRow, int iCol)
 
         for (j = 1; j <=iCol ; j++)
         {
-            if((i == 1) ||(j == iCol) || (i == 1) ||(j == 1) || (i == j))
+            if((i == 1) ||(j == iCol) || (i == iRow) ||(j == 1) || (i == j))
                 {
                     printf("*\t"); 
                   
